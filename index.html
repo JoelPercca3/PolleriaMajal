@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pollería Majal</title>
 
-    <!-- AOS -->
+    <!-- AOS Animaciones -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- ICONOS -->
+    <!-- Iconos -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -46,19 +46,19 @@
 
       <div class="cards">
         <div class="card" data-aos="fade-up">
-          <img src="especialidad2.jpeg" loading="lazy" />
+          <img src="especialidad2.jpeg" alt="" loading="lazy" />
           <h3>Pollo a la Brasa</h3>
           <p>Jugoso pollo con papas crocantes</p>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="100">
-          <img src="especialidad1.jpeg" loading="lazy" />
+          <img src="especialidad1.jpeg" alt="" loading="lazy" />
           <h3>Parrillada</h3>
           <p>Variedad de carnes a la parrilla</p>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="200">
-          <img src="especialidad3.jpeg" loading="lazy" />
+          <img src="especialidad3.jpeg" alt="" loading="lazy" />
           <h3>Combo Familiar</h3>
           <p>Perfecto para compartir</p>
         </div>
@@ -77,24 +77,27 @@
         </a>
 
         <div class="canales-grid">
+          <!-- Teléfono -->
           <a href="tel:999888777" class="canal-card" data-aos="zoom-in"> 📞 </a>
 
+          <!-- PedidosYa -->
           <a
             href="https://www.pedidosya.com.pe/restaurantes/huancayo/majal-299477f9-7556-4328-b5dc-a6441d2c9ae8-menu"
             target="_blank"
             class="canal-card"
             data-aos="zoom-in"
           >
-            <img src="pedidosYa.png" loading="lazy" />
+            <img src="pedidosYa.png" alt="PedidosYa" loading="lazy" />
           </a>
 
+          <!-- Rappi -->
           <a
-            href="https://www.rappi.com.pe/restaurantes/delivery/67322-majal"
+            href="https://www.rappi.com.pe/restaurantes/delivery/67322-majal?utm_source=app&utm_medium=deeplink&utm_campaign=share"
             target="_blank"
             class="canal-card"
             data-aos="zoom-in"
           >
-            <img src="rappi.png" loading="lazy" />
+            <img src="rappi.png" alt="Rappi" loading="lazy" />
           </a>
         </div>
       </div>
@@ -116,32 +119,38 @@
     <!-- MAPA -->
     <div class="map-wrapper">
       <h1 data-aos="fade-up">CONOCE NUESTRA UBICACION!</h1>
+      <h3>📍 Av. Real 533</h3>
 
       <div class="map-content">
+        <!-- MAPA -->
         <div class="box" data-aos="zoom-in">
           <iframe
             src="https://www.google.com/maps?q=Ca.+Real+515,+Huancayo&output=embed"
           ></iframe>
         </div>
 
+        <!-- VIDEO -->
         <div class="box" data-aos="zoom-in" data-aos-delay="100">
-          <video src="videoMajal.mp4" controls></video>
+          <video src="videoMajal.mp4" autoplay muted loop playsinline></video>
         </div>
 
+        <!-- IMAGEN -->
         <div class="box" data-aos="zoom-in" data-aos-delay="200">
-          <img src="delivery.jpeg" loading="lazy" />
+          <img src="delivery.jpeg" alt="" loading="lazy" />
         </div>
       </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- FOOTER COMPLETO -->
     <footer class="footer">
       <div class="footer-container">
+        <!-- Logo + descripción -->
         <div class="footer-brand" data-aos="fade-up">
-          <img src="logoPolleriaMajal.jpeg" />
+          <img src="logoPolleriaMajal.jpeg" alt="" />
           <p>¡Etiqueta a tu acompañante! ⬇️ 📍 Av. Real 533</p>
         </div>
 
+        <!-- Links rápidos -->
         <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
           <h3>Enlaces</h3>
           <a href="#">Inicio</a>
@@ -150,6 +159,7 @@
           <a href="#">Contacto</a>
         </div>
 
+        <!-- Redes sociales -->
         <div class="footer-social" data-aos="fade-up" data-aos-delay="200">
           <h3>Síguenos</h3>
           <div class="social-icons">
@@ -167,6 +177,7 @@
           </div>
         </div>
 
+        <!-- Contacto -->
         <div class="footer-contact" data-aos="fade-up" data-aos-delay="300">
           <h3>Contáctanos</h3>
           <a href="https://wa.me/51964010310" target="_blank">📱 WhatsApp</a>
@@ -179,7 +190,7 @@
       </div>
     </footer>
 
-    <!-- SCRIPT AOS -->
+    <!-- AOS SCRIPT -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({

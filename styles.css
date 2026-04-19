@@ -378,6 +378,11 @@ nav a:hover {
   text-align: center;
   padding-bottom: 50px;
 }
+.map-wrapper h3 {
+  color: white;
+  text-align: center;
+  padding-top: 0;
+}
 
 @media (max-width: 768px) {
   /* NAVBAR */
