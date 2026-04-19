@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pollería Majal</title>
+
+    <!-- AOS Animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <img class="logo" src="logoPolleriaMajal.jpeg" alt="logo" />
+      <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Menú</a>
+        <a href="#">Reservas</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Contacto</a>
+      </nav>
+      <button class="btn-primary">Pedir Ahora</button>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text" data-aos="fade-up">
+        <h1>EL MEJOR <span>POLLO A LA BRASA</span></h1>
+        <p>Delicioso, crocante y con el sabor único que te encanta</p>
+        <button class="btn-secondary">Ver Menú</button>
+      </div>
+    </section>
+
+    <!-- ESPECIALIDADES -->
+    <section class="specials">
+      <h2 data-aos="fade-up">NUESTRAS ESPECIALIDADES</h2>
+
+      <div class="cards">
+        <div class="card" data-aos="fade-up">
+          <img src="especialidad2.jpeg" loading="lazy" />
+          <h3>Pollo a la Brasa</h3>
+          <p>Jugoso pollo con papas crocantes</p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <img src="especialidad1.jpeg" loading="lazy" />
+          <h3>Parrillada</h3>
+          <p>Variedad de carnes a la parrilla</p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <img src="especialidad3.jpeg" loading="lazy" />
+          <h3>Combo Familiar</h3>
+          <p>Perfecto para compartir</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CANALES -->
+    <section class="canales">
+      <div class="overlay">
+        <h2 data-aos="fade-up">
+          Conoce nuestros canales<br />y elige cómo pedir
+        </h2>
+
+        <a href="#" class="btn-web" data-aos="zoom-in">
+          PIDE AQUÍ POR LA WEB
+        </a>
+
+        <div class="canales-grid">
+          <a href="tel:999888777" class="canal-card" data-aos="zoom-in"> 📞 </a>
+
+          <a href="#" class="canal-card" data-aos="zoom-in">
+            <img src="pedidosYa.png" loading="lazy" />
+          </a>
+
+          <a href="#" class="canal-card" data-aos="zoom-in">
+            <img src="rappi.png" loading="lazy" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMO -->
+    <section class="promo" data-aos="fade-up">
+      <h2>Super Combo</h2>
+      <p class="price">S/59.90</p>
+      <button class="btn-primary">Pedir Ahora</button>
+    </section>
+
+    <!-- MAPA -->
+    <div class="map-wrapper">
+      <h1 data-aos="fade-up">CONOCE NUESTRA UBICACION!</h1>
+
+      <div class="map-content">
+        <div class="box" data-aos="zoom-in">
+          <iframe
+            src="https://www.google.com/maps?q=Ca.+Real+515,+Huancayo&output=embed"
+          ></iframe>
+        </div>
+
+        <div class="box" data-aos="zoom-in" data-aos-delay="100">
+          <video src="videoMajal.mp4" autoplay muted loop playsinline></video>
+        </div>
+
+        <div class="box" data-aos="zoom-in" data-aos-delay="200">
+          <img src="delivery.jpeg" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo + descripción -->
+        <div class="footer-brand" data-aos="fade-up">
+          <img src="logoPolleriaMajal.jpeg" alt="logo" />
+          <p>¡Etiqueta a tu acompañante! ⬇️ 📍 Av. Real 533</p>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
+          <h3>Enlaces</h3>
+          <a href="#">Inicio</a>
+          <a href="#">Menú</a>
+          <a href="#">Promociones</a>
+          <a href="#">Contacto</a>
+        </div>
+
+        <!-- Redes -->
+        <div class="footer-social" data-aos="fade-up" data-aos-delay="200">
+          <h3>Síguenos</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/majal.polleria" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="https://www.instagram.com/majal.polleria/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@majal.polleria" target="_blank">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contacto -->
+        <div class="footer-contact" data-aos="fade-up" data-aos-delay="300">
+          <h3>Contáctanos</h3>
+          <a href="https://wa.me/51964010310" target="_blank">📱 WhatsApp</a>
+          <a href="tel:964010310">📞 Llamar</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 MAJAL - Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <!-- AOS SCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+    </script>
+  </body>
+</html>

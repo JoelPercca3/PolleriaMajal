@@ -1,0 +1,610 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #fff;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #ff3c00, #ff7a00);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 100px;
+  height: 110px;
+  margin-left: 80px;
+  background-color: white;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: #000000;
+}
+
+.btn-primary {
+  background: #ff3c00;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #942402;
+  transform: scale(1.08);
+  /* 🔥 se agranda */
+}
+
+.btn-secondary {
+  background: #ff3c00;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("polloMajal.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  image-rendering: auto;
+  filter: contrast(1.1) brightness(1.05);
+  text-align: center;
+  color: white;
+}
+
+.hero-text {
+  max-width: 600px;
+  /* 🔥 evita que el texto se estire mucho */
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.hero-text span {
+  color: yellow;
+}
+
+/* ESPECIALIDADES */
+.specials {
+  padding: 60px 40px;
+  text-align: center;
+  min-height: 80vh;
+  /* 🔥 tamaño grande pero no full pantalla */
+}
+
+.specials h2 {
+  font-family: "Subjectivity", Sans-serif;
+  margin-bottom: 30px;
+  color: #000000;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  overflow: hidden;
+  /* 🔥 importante para zoom */
+  background: #f5f5f5;
+  padding: 15px;
+  width: 460px;
+  border-radius: 15px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 380px;
+  /* 🔥 tamaño fijo */
+  object-fit: cover;
+  /* 🔥 recorta sin deformar */
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  /* 🔥 zoom al pasar */
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* PROMO */
+.promo {
+  background: linear-gradient(135deg, #ff3c00, #ff7a00);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.price {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.canales {
+  background: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092")
+    center/cover no-repeat;
+  height: 400px;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay h2 {
+  color: white;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.btn-web {
+  background: #b22222;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.canales-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.canal-card {
+  background: white;
+  width: 150px;
+  height: 90px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+.canal-card img {
+  width: 80px;
+}
+
+.canal-card:hover {
+  transform: translateY(-5px);
+}
+
+.canal-card:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.footer {
+  background: #000000;
+  color: #fff;
+  padding: 50px 20px 20px;
+  min-height: 400px;
+}
+
+.footer-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1300px;
+  padding-top: 50px;
+  margin: auto;
+}
+
+.footer-container img {
+  width: 150px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer h2 {
+  color: #ff3c00;
+  font-size: 28px;
+}
+
+.footer h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.footer a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: #ff3c00;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-contact a {
+  margin-bottom: 8px;
+}
+
+.footer a,
+.footer p {
+  font-size: 17px;
+}
+
+.footer p {
+  padding-top: 20px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #222;
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.social-icons a {
+  font-size: 22px;
+  margin-right: 15px;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff3c00;
+  transform: scale(1.2);
+}
+
+.map-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  /* 🔥 límite elegante */
+  margin: 40px auto 120px;
+  /* 🔥 centra horizontalmente */
+  padding: 0 20px;
+  /* opcional para respiración */
+}
+
+/* TODOS LOS BLOQUES IGUALES */
+.box {
+  height: 480px;
+  /* 🔥 misma altura */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(255, 60, 0, 0.4);
+}
+
+/* MAPA */
+.box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* VIDEO */
+.box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* IMAGEN */
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map-wrapper {
+  padding: 80px 0;
+  background: linear-gradient(to bottom, #000, #111);
+}
+
+.map-wrapper h1 {
+  color: white;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 10px;
+  }
+
+  .logo {
+    margin-left: 0;
+    width: 80px;
+    height: auto;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  /* HERO */
+  .hero {
+    height: 70vh;
+    padding: 0 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  /* ESPECIALIDADES */
+  .specials {
+    padding: 40px 20px;
+  }
+
+  .cards {
+    flex-direction: column; /* 🔥 se apilan */
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .card img {
+    height: 250px;
+  }
+
+  /* PROMO */
+  .price {
+    font-size: 28px;
+  }
+
+  /* CANALES */
+  .canales {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .canales-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .canal-card {
+    width: 80%;
+  }
+
+  /* MAPA / VIDEO / IMAGEN */
+  .map-content {
+    grid-template-columns: 1fr; /* 🔥 todo en columna */
+  }
+
+  .box {
+    height: 300px;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-container img {
+    width: 120px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  /* NAVBAR */
+  .navbar {
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .btn-primary {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  /* HERO */
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-text h1 {
+    font-size: 24px; /* 🔥 más pequeño */
+  }
+
+  .hero-text p {
+    font-size: 13px;
+  }
+
+  .btn-secondary {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* ESPECIALIDADES */
+  .specials h2 {
+    font-size: 26px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .card img {
+    height: 200px; /* 🔥 más compacto */
+  }
+
+  /* CANALES */
+  .overlay h2 {
+    font-size: 22px;
+  }
+
+  .btn-web {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .canal-card {
+    width: 100%;
+    height: 80px;
+  }
+
+  /* MAPA / VIDEO / IMAGEN */
+  .box {
+    height: 220px; /* 🔥 más pequeño para celular */
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 40px 10px;
+  }
+
+  .footer h2 {
+    font-size: 22px;
+  }
+
+  .footer h3 {
+    font-size: 16px;
+  }
+
+  .footer a,
+  .footer p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* 🔥 se apilan */
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-brand img {
+    width: 120px;
+  }
+
+  .footer-links,
+  .footer-social,
+  .footer-contact {
+    width: 100%;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 10px;
+  }
+
+  .footer h3 {
+    font-size: 16px;
+  }
+
+  .footer a,
+  .footer p {
+    font-size: 14px;
+  }
+}
