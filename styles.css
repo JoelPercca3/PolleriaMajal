@@ -383,7 +383,9 @@ nav a:hover {
   text-align: center;
   padding-top: 0;
 }
-
+/* ===================== */
+/* 📱 TABLET (<=768px) */
+/* ===================== */
 @media (max-width: 768px) {
   /* NAVBAR */
   .navbar {
@@ -433,7 +435,7 @@ nav a:hover {
   }
 
   .cards {
-    flex-direction: column; /* 🔥 se apilan */
+    flex-direction: column;
     align-items: center;
   }
 
@@ -458,17 +460,18 @@ nav a:hover {
   }
 
   .canales-grid {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* 🔥 por si no entran */
+    gap: 15px;
   }
-
   .canal-card {
     width: 80%;
   }
 
-  /* MAPA / VIDEO / IMAGEN */
+  /* MAPA */
   .map-content {
-    grid-template-columns: 1fr; /* 🔥 todo en columna */
+    grid-template-columns: 1fr;
   }
 
   .box {
@@ -480,16 +483,29 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 30px;
   }
 
   .footer-container img {
     width: 120px;
   }
 
+  .footer-links,
+  .footer-social,
+  .footer-contact {
+    width: 100%;
+  }
+
   .social-icons {
+    display: flex;
     justify-content: center;
+    gap: 15px;
   }
 }
+
+/* ===================== */
+/* 📱 CELULAR (<=480px) */
+/* ===================== */
 @media (max-width: 480px) {
   /* NAVBAR */
   .navbar {
@@ -511,7 +527,7 @@ nav a:hover {
   }
 
   .hero-text h1 {
-    font-size: 24px; /* 🔥 más pequeño */
+    font-size: 24px;
   }
 
   .hero-text p {
@@ -533,10 +549,10 @@ nav a:hover {
   }
 
   .card img {
-    height: 200px; /* 🔥 más compacto */
+    height: 200px;
   }
 
-  /* CANALES */
+  /* CANALES (🔥 ARREGLADO HORIZONTAL) */
   .overlay h2 {
     font-size: 22px;
   }
@@ -545,15 +561,22 @@ nav a:hover {
     font-size: 14px;
     padding: 10px 15px;
   }
+  .canales-grid {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
 
-  .canal-card {
-    width: 100%;
-    height: 80px;
+    padding-bottom: 20px;
   }
 
-  /* MAPA / VIDEO / IMAGEN */
+  .canal-card {
+    width: 70px;
+    height: 70px;
+    flex: none;
+  }
+  /* MAPA */
   .box {
-    height: 220px; /* 🔥 más pequeño para celular */
+    height: 220px;
   }
 
   /* FOOTER */
@@ -563,45 +586,6 @@ nav a:hover {
 
   .footer h2 {
     font-size: 22px;
-  }
-
-  .footer h3 {
-    font-size: 16px;
-  }
-
-  .footer a,
-  .footer p {
-    font-size: 14px;
-  }
-}
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column; /* 🔥 se apilan */
-    align-items: center;
-    text-align: center;
-    gap: 30px;
-  }
-
-  .footer-brand img {
-    width: 120px;
-  }
-
-  .footer-links,
-  .footer-social,
-  .footer-contact {
-    width: 100%;
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer {
-    padding: 40px 10px;
   }
 
   .footer h3 {
