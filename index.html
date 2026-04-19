@@ -21,7 +21,15 @@
     <!-- NAVBAR -->
     <header class="navbar" data-aos="fade-down">
       <img class="logo" src="logoPolleriaMajal.jpeg" alt="logo" />
-      <nav>
+
+      <!-- Botón hamburguesa -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="nav-menu">
         <a href="#">Inicio</a>
         <a href="#">Menú</a>
         <a href="#">Reservas</a>
@@ -196,6 +204,25 @@
       AOS.init({
         duration: 800,
         once: true,
+      });
+    </script>
+    <script>
+      // Menú hamburguesa
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      // Cerrar menú al hacer clic en un enlace
+      const navLinks = document.querySelectorAll("#nav-menu a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        });
       });
     </script>
   </body>
