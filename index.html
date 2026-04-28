@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pollería Majal</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap"
+      rel="stylesheet"
+    />
     <!-- AOS Animaciones -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
@@ -31,10 +36,8 @@
 
       <nav id="nav-menu">
         <a href="#">Inicio</a>
-        <a href="#">Menú</a>
-        <a href="#">Reservas</a>
-        <a href="#">Nosotros</a>
-        <a href="#">Contacto</a>
+        <a href="#menu">Menú</a>
+        <a href="#Contacto">Contacto</a>
       </nav>
       <button class="btn-primary">Pedir Ahora</button>
     </header>
@@ -54,25 +57,454 @@
 
       <div class="cards">
         <div class="card" data-aos="fade-up">
-          <img src="especialidad2.jpeg" alt="" loading="lazy" />
+          <img src="especialidad1.jpeg" alt="Pollo a la Brasa" loading="lazy" />
           <h3>Pollo a la Brasa</h3>
-          <p>Jugoso pollo con papas crocantes</p>
+          <p>Pollo dorado, papas crocantes y ensalada fresca.</p>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="100">
-          <img src="especialidad1.jpeg" alt="" loading="lazy" />
-          <h3>Parrillada</h3>
-          <p>Variedad de carnes a la parrilla</p>
+          <img src="majalGrill.jpeg" alt="Parrillada" loading="lazy" />
+          <h3>Majal Grill</h3>
+          <p>Jugosos cortes acompañados de papas crocantes</p>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="200">
-          <img src="especialidad3.jpeg" alt="" loading="lazy" />
+          <img src="Combo.jpeg" alt="Combo Familiar" loading="lazy" />
           <h3>Combo Familiar</h3>
-          <p>Perfecto para compartir</p>
+          <p>Perfecto para compartir en Familia</p>
         </div>
       </div>
     </section>
 
+    <!-- SECCIÓN MENÚ - ESTILO MODERNO -->
+    <!-- SECCIÓN MENÚ - ESTILO MODERNO -->
+    <section class="menu-moderno" id="menu" data-aos="fade-up">
+      <div class="menu-moderno-header">
+        <span class="menu-badge">🍽️ SABOR QUE ENCANTA</span>
+        <h2>Descubre nuestro <span class="highlight">Menú</span></h2>
+      </div>
+
+      <!-- TABS / CATEGORÍAS -->
+      <div class="menu-tabs">
+        <button class="tab-btn active" data-category="combos">🔥 Combos</button>
+        <button class="tab-btn" data-category="pollos">🍗 Pollos</button>
+        <button class="tab-btn" data-category="parrillas">🥩 Parrillas</button>
+        <button class="tab-btn" data-category="pastas">🍝 Pastas</button>
+        <button class="tab-btn" data-category="salchicha">🌭 Salchicha</button>
+        <button class="tab-btn" data-category="bebidas">🍹 Bebidas</button>
+        <button class="tab-btn" data-category="extras">➕ Extras</button>
+      </div>
+
+      <!-- CONTENIDO DE CATEGORÍAS -->
+      <div class="menu-content">
+        <!-- COMBOS -->
+        <div class="menu-category-group active" data-category="combos">
+          <div class="menu-moderno-grid">
+            <div class="menu-moderno-card" data-aos="flip-left">
+              <span class="card-badge">⭐ Más pedido</span>
+              <h3>Familiar Majal</h3>
+              <p>
+                1 pollo a la brasa + papas crujientes + ensalada fresca + jarra
+                de chicha morada 1L
+              </p>
+              <div class="card-footer">
+                <span class="price">S/ 55</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="flip-left"
+              data-aos-delay="50"
+            >
+              <span class="card-badge card-badge--blue">Para 2</span>
+              <h3>Duo Majal</h3>
+              <p>
+                ½ pollo a la brasa + papas crujientes + ensalada fresca + chicha
+                morada 1L
+              </p>
+              <div class="card-footer">
+                <span class="price">S/ 28.90</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="flip-left"
+              data-aos-delay="100"
+            >
+              <span class="card-badge card-badge--green">Premium</span>
+              <h3>Mostro Entero</h3>
+              <p>
+                1 pollo a la brasa + chaufa + papas crujientes + ensalada fresca
+                + gaseosa 1.5L
+              </p>
+              <div class="card-footer">
+                <span class="price">S/ 62</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="flip-left"
+              data-aos-delay="150"
+            >
+              <h3>Majal Mixto</h3>
+              <p>
+                ¼ pollo + chorizo parrillero BRAEDT + mollejitas + papas
+                crujientes + ensalada
+              </p>
+              <div class="card-footer">
+                <span class="price">S/ 22</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="flip-left"
+              data-aos-delay="200"
+            >
+              <h3>Sabor Majal</h3>
+              <p>
+                ¼ pollo + parrilla de res + chorizo parrillero BRAEDT + papas
+                crujientes + ensalada
+              </p>
+              <div class="card-footer">
+                <span class="price">S/ 29.90</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="flip-left"
+              data-aos-delay="250"
+            >
+              <h3>Majal Choricero</h3>
+              <p>
+                ¼ pollo + chorizo parrillero BRAEDT + papas crujientes +
+                ensalada fresca
+              </p>
+              <div class="card-footer">
+                <span class="price">S/ 17</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="flip-left"
+              data-aos-delay="300"
+            >
+              <h3>Mollejitas Majal</h3>
+              <p>¼ pollo + mollejitas + papas crujientes + ensalada fresca</p>
+              <div class="card-footer">
+                <span class="price">S/ 17</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- POLLOS -->
+        <div class="menu-category-group" data-category="pollos">
+          <div class="menu-moderno-grid">
+            <div class="menu-moderno-card" data-aos="zoom-in">
+              <span class="card-badge">⭐ Clásico</span>
+              <h3>1 Pollo a la brasa</h3>
+              <p>Pollo entero a la brasa con nuestro aderezo secreto</p>
+              <div class="card-footer">
+                <span class="price">S/ 48</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="zoom-in"
+              data-aos-delay="50"
+            >
+              <h3>¼ de pollo</h3>
+              <p>Un cuarto de pollo a la brasa jugoso y crocante</p>
+              <div class="card-footer">
+                <span class="price">S/ 12</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <h3>⅛ de pollo</h3>
+              <p>Un octavo de pollo a la brasa, ideal para uno</p>
+              <div class="card-footer">
+                <span class="price">S/ 8</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="zoom-in"
+              data-aos-delay="150"
+            >
+              <span class="card-badge card-badge--green">Especial</span>
+              <h3>Mostro</h3>
+              <p>Pollo a la brasa especial tamaño grande</p>
+              <div class="card-footer">
+                <span class="price">S/ 16</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <h3>Mostrito</h3>
+              <p>Pollo a la brasa tamaño mediano</p>
+              <div class="card-footer">
+                <span class="price">S/ 12</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="zoom-in"
+              data-aos-delay="250"
+            >
+              <h3>Chaufa clásico</h3>
+              <p>Arroz chaufa al estilo Majal</p>
+              <div class="card-footer">
+                <span class="price">S/ 10</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PARRILLAS -->
+        <div class="menu-category-group" data-category="parrillas">
+          <div class="menu-moderno-grid">
+            <div class="menu-moderno-card" data-aos="zoom-in">
+              <h3>Parrilla de pollo</h3>
+              <p>Jugosa pechuga a la parrilla con especias secretas</p>
+              <div class="card-footer">
+                <span class="price">S/ 15</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="zoom-in"
+              data-aos-delay="50"
+            >
+              <h3>Parrilla de res</h3>
+              <p>Bistec a la parrilla, término a tu gusto</p>
+              <div class="card-footer">
+                <span class="price">S/ 17</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <span class="card-badge">⭐ Estrella</span>
+              <h3>Parrilla mixta</h3>
+              <p>Pollo + res + chorizo, la combinación perfecta</p>
+              <div class="card-footer">
+                <span class="price">S/ 25</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="zoom-in"
+              data-aos-delay="150"
+            >
+              <span class="card-badge card-badge--blue">Especial</span>
+              <h3>Pollo a la pizzarola</h3>
+              <p>Pollo gratinado con salsa de tomate y queso derretido</p>
+              <div class="card-footer">
+                <span class="price">S/ 20</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASTAS -->
+        <div class="menu-category-group" data-category="pastas">
+          <div class="menu-moderno-grid">
+            <div class="menu-moderno-card" data-aos="zoom-in">
+              <h3>Fetuccini a la huancaína</h3>
+              <p>Con ¼ de pollo a la brasa incluido</p>
+              <div class="card-footer">
+                <span class="price">S/ 19</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <span class="card-badge card-badge--green">Con parrilla</span>
+              <h3>Fetuccini a la huancaína</h3>
+              <p>Con parrilla de pollo incluida</p>
+              <div class="card-footer">
+                <span class="price">S/ 21</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SALCHICHA -->
+        <div class="menu-category-group" data-category="salchicha">
+          <div class="menu-moderno-grid">
+            <div class="menu-moderno-card" data-aos="zoom-in">
+              <span class="card-badge card-badge--green">Con brasa</span>
+              <h3>Salchibrasa</h3>
+              <p>Salchicha a la brasa con acompañamiento al estilo Majal</p>
+              <div class="card-footer">
+                <span class="price">S/ 16</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <h3>Salchipapa</h3>
+              <p>Salchicha con papas fritas crocantes</p>
+              <div class="card-footer">
+                <span class="price">S/ 10</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BEBIDAS -->
+        <div class="menu-category-group" data-category="bebidas">
+          <div class="menu-moderno-grid bebidas-grid">
+            <div class="menu-moderno-card" data-aos="zoom-in">
+              <span class="card-badge">⭐ Natural</span>
+              <h3>Chicha morada 1L</h3>
+              <p>Refrescante y natural, hecha en casa</p>
+              <div class="card-footer">
+                <span class="price">S/ 9</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="zoom-in"
+              data-aos-delay="50"
+            >
+              <h3>Limonada clásica</h3>
+              <p>El toque cítrico perfecto</p>
+              <div class="card-footer">
+                <span class="price">S/ 8</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <h3>Limonada de fresa</h3>
+              <p>Dulce y refrescante</p>
+              <div class="card-footer">
+                <span class="price">S/ 10</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+
+            <div
+              class="menu-moderno-card"
+              data-aos="zoom-in"
+              data-aos-delay="150"
+            >
+              <h3>Infusiones</h3>
+              <p>Manzanilla · Anís · Té</p>
+              <div class="card-footer">
+                <span class="price">S/ 2</span>
+                <button class="order-btn">Pedir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXTRAS / GUARNICIÓN -->
+        <div class="menu-category-group" data-category="extras">
+          <div class="menu-moderno-grid extras-moderno">
+            <div class="menu-moderno-card extra-card" data-aos="zoom-in">
+              <h3>¼ de pollo a la brasa</h3>
+              <span class="price">S/ 8</span>
+            </div>
+
+            <div
+              class="menu-moderno-card extra-card"
+              data-aos="zoom-in"
+              data-aos-delay="50"
+            >
+              <h3>Porción de papas</h3>
+              <span class="price">S/ 8</span>
+            </div>
+
+            <div
+              class="menu-moderno-card extra-card"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <h3>Chorizo parrillero BRAEDT</h3>
+              <span class="price">S/ 5</span>
+            </div>
+
+            <div
+              class="menu-moderno-card extra-card"
+              data-aos="zoom-in"
+              data-aos-delay="150"
+            >
+              <h3>Porción de mollejitas</h3>
+              <span class="price">S/ 8</span>
+            </div>
+
+            <div
+              class="menu-moderno-card extra-card"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <h3>Porción de ensalada</h3>
+              <span class="price">S/ 6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- fin menu-content -->
+    </section>
+    <!-- fin menu-moderno -->
     <!-- CANALES -->
     <section class="canales">
       <div class="overlay">
@@ -86,7 +518,7 @@
 
         <div class="canales-grid">
           <!-- Teléfono -->
-          <a href="tel:999888777" class="canal-card" data-aos="zoom-in"> 📞 </a>
+          <a href="tel:964010310" class="canal-card" data-aos="zoom-in">📞</a>
 
           <!-- PedidosYa -->
           <a
@@ -114,26 +546,27 @@
     <!-- PROMO -->
     <section class="promo" data-aos="fade-up">
       <h2>Super Combo</h2>
-      <p class="price">S/59.90</p>
+      <p class="price">S/ 59.90</p>
       <button class="btn-primary">Pedir Ahora</button>
     </section>
 
     <!-- CTA -->
-    <section class="cta" data-aos="fade-up">
+    <section id="Contacto" class="cta" data-aos="fade-up">
       <h2>¡ORDENA AHORA!</h2>
       <p>Llámanos al: <strong>964 010 310</strong></p>
     </section>
 
     <!-- MAPA -->
     <div class="map-wrapper">
-      <h1 data-aos="fade-up">CONOCE NUESTRA UBICACION!</h1>
-      <h3>📍 Av. Real 533</h3>
+      <h1 data-aos="fade-up">¡CONOCE NUESTRA UBICACIÓN!</h1>
+      <h3>📍 Av. Real 515</h3>
 
       <div class="map-content">
         <!-- MAPA -->
         <div class="box" data-aos="zoom-in">
           <iframe
             src="https://www.google.com/maps?q=Ca.+Real+515,+Huancayo&output=embed"
+            title="Mapa Pollería Majal"
           ></iframe>
         </div>
 
@@ -144,7 +577,7 @@
 
         <!-- IMAGEN -->
         <div class="box" data-aos="zoom-in" data-aos-delay="200">
-          <img src="delivery.jpeg" alt="" loading="lazy" />
+          <img src="delivery.jpeg" alt="Delivery Majal" loading="lazy" />
         </div>
       </div>
     </div>
@@ -154,15 +587,15 @@
       <div class="footer-container">
         <!-- Logo + descripción -->
         <div class="footer-brand" data-aos="fade-up">
-          <img src="logoPolleriaMajal.jpeg" alt="" />
-          <p>¡Etiqueta a tu acompañante! ⬇️ 📍 Av. Real 533</p>
+          <img src="logoPolleriaMajal.jpeg" alt="Logo Pollería Majal" />
+          <p>¡Etiqueta a tu acompañante! ⬇️ 📍 Av. Real 515</p>
         </div>
 
         <!-- Links rápidos -->
         <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
           <h3>Enlaces</h3>
           <a href="#">Inicio</a>
-          <a href="#">Menú</a>
+          <a href="#menu">Menú</a>
           <a href="#">Promociones</a>
           <a href="#">Contacto</a>
         </div>
@@ -171,15 +604,25 @@
         <div class="footer-social" data-aos="fade-up" data-aos-delay="200">
           <h3>Síguenos</h3>
           <div class="social-icons">
-            <a href="https://www.facebook.com/majal.polleria" target="_blank">
+            <a
+              href="https://www.facebook.com/majal.polleria"
+              target="_blank"
+              aria-label="Facebook"
+            >
               <i class="fab fa-facebook"></i>
             </a>
-
-            <a href="https://www.instagram.com/majal.polleria/" target="_blank">
+            <a
+              href="https://www.instagram.com/majal.polleria/"
+              target="_blank"
+              aria-label="Instagram"
+            >
               <i class="fab fa-instagram"></i>
             </a>
-
-            <a href="https://www.tiktok.com/@majal.polleria" target="_blank">
+            <a
+              href="https://www.tiktok.com/@majal.polleria"
+              target="_blank"
+              aria-label="TikTok"
+            >
               <i class="fab fa-tiktok"></i>
             </a>
           </div>
@@ -206,6 +649,7 @@
         once: true,
       });
     </script>
+
     <script>
       // Menú hamburguesa
       const hamburger = document.getElementById("hamburger");
@@ -217,11 +661,29 @@
       });
 
       // Cerrar menú al hacer clic en un enlace
-      const navLinks = document.querySelectorAll("#nav-menu a");
-      navLinks.forEach((link) => {
+      document.querySelectorAll("#nav-menu a").forEach((link) => {
         link.addEventListener("click", () => {
           hamburger.classList.remove("active");
           navMenu.classList.remove("active");
+        });
+      });
+
+      // Funcionalidad de pestañas del menú
+      const tabBtns = document.querySelectorAll(".tab-btn");
+      const categoryGroups = document.querySelectorAll(".menu-category-group");
+
+      tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          tabBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const category = btn.getAttribute("data-category");
+          categoryGroups.forEach((group) => {
+            group.classList.remove("active");
+            if (group.getAttribute("data-category") === category) {
+              group.classList.add("active");
+            }
+          });
         });
       });
     </script>
