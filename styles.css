@@ -108,19 +108,16 @@ nav a:hover {
 }
 
 .hero-text h1 {
-  font-family: "Henny Penny", system-ui;
   font-size: 60px;
   line-height: 1.2;
 }
 
 .hero-text p {
-  font-family: "Henny Penny", system-ui;
   font-size: 20px;
   margin-top: 10px;
 }
 
 .hero-text span {
-  font-family: "Henny Penny", system-ui;
   color: #ffe135;
 }
 
