@@ -669,6 +669,7 @@
       });
 
       // Funcionalidad de pestañas del menú
+      // Funcionalidad de pestañas del menú
       const tabBtns = document.querySelectorAll(".tab-btn");
       const categoryGroups = document.querySelectorAll(".menu-category-group");
 
@@ -684,6 +685,22 @@
               group.classList.add("active");
             }
           });
+        });
+      });
+
+      // ✅ NUEVO: Botones "Pedir" → WhatsApp
+      const WHATSAPP_NUMBER = "51964010310"; // tu número con código de país
+
+      document.querySelectorAll(".order-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const card = btn.closest(".menu-moderno-card");
+          const nombre = card.querySelector("h3").textContent.trim();
+          const precio = card.querySelector(".price").textContent.trim();
+
+          const mensaje = `¡Hola! Quiero pedir:\n\n🍗 *${nombre}* — ${precio}\n\n¿Está disponible?`;
+          const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`;
+
+          window.open(url, "_blank");
         });
       });
     </script>
