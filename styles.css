@@ -518,23 +518,6 @@ nav a:hover {
 /* ===================== */
 /* PROMO                */
 /* ===================== */
-.promo {
-  background: linear-gradient(135deg, #ff3c00, #ff7a00);
-  color: white;
-  text-align: center;
-  padding: 70px 20px;
-}
-
-.promo h2 {
-  font-size: 36px;
-  font-weight: 900;
-}
-
-.promo .price {
-  font-size: 48px;
-  margin: 16px 0 24px;
-  color: white;
-}
 
 /* ===================== */
 /* CTA                  */
