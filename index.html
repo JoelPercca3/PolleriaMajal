@@ -47,7 +47,7 @@
       <div class="hero-text" data-aos="fade-up">
         <h1>EL MEJOR <span>POLLO A LA BRASA</span></h1>
         <p>Delicioso, crocante y con el sabor único que te encanta</p>
-        <button class="btn-secondary">Ver Menú</button>
+        <a href="#menu" class="btn-secondary">Ver Menú</a>
       </div>
     </section>
 
@@ -136,7 +136,7 @@
               data-aos-delay="100"
             >
               <span class="card-badge card-badge--green">Premium</span>
-              <h3>Mostro Entero</h3>
+              <h3 id="mostro-entero">Mostro Entero</h3>
               <p>
                 1 pollo a la brasa + chaufa + papas crujientes + ensalada fresca
                 + gaseosa 1.5L
@@ -546,8 +546,8 @@
     <!-- PROMO -->
     <section class="promo" data-aos="fade-up">
       <h2>Super Combo</h2>
-      <p class="price">S/ 59.90</p>
-      <button class="btn-primary">Pedir Ahora</button>
+      <p class="price">S/ 61.90</p>
+      <button class="btn-primary" id="btn-super-combo">Pedir Ahora</button>
     </section>
 
     <!-- CTA -->
@@ -651,7 +651,9 @@
     </script>
 
     <script>
-      // Menú hamburguesa
+      // =====================
+      // MENÚ HAMBURGUESA
+      // =====================
       const hamburger = document.getElementById("hamburger");
       const navMenu = document.getElementById("nav-menu");
 
@@ -660,7 +662,6 @@
         navMenu.classList.toggle("active");
       });
 
-      // Cerrar menú al hacer clic en un enlace
       document.querySelectorAll("#nav-menu a").forEach((link) => {
         link.addEventListener("click", () => {
           hamburger.classList.remove("active");
@@ -668,8 +669,9 @@
         });
       });
 
-      // Funcionalidad de pestañas del menú
-      // Funcionalidad de pestañas del menú
+      // =====================
+      // TABS DEL MENÚ
+      // =====================
       const tabBtns = document.querySelectorAll(".tab-btn");
       const categoryGroups = document.querySelectorAll(".menu-category-group");
 
@@ -679,6 +681,7 @@
           btn.classList.add("active");
 
           const category = btn.getAttribute("data-category");
+
           categoryGroups.forEach((group) => {
             group.classList.remove("active");
             if (group.getAttribute("data-category") === category) {
@@ -688,9 +691,14 @@
         });
       });
 
-      // ✅ NUEVO: Botones "Pedir" → WhatsApp
-      const WHATSAPP_NUMBER = "51964010310"; // tu número con código de país
+      // =====================
+      // WHATSAPP
+      // =====================
+      const WHATSAPP_NUMBER = "51964010310";
+      const MENSAJE_NAVBAR =
+        "¡Hola! Quiero hacer un pedido 🍗 ¿Me pueden ayudar?";
 
+      // Botones de productos
       document.querySelectorAll(".order-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
           const card = btn.closest(".menu-moderno-card");
@@ -703,13 +711,53 @@
           window.open(url, "_blank");
         });
       });
-      const MENSAJE_NAVBAR =
-        "¡Hola! Quiero hacer un pedido 🍗 ¿Me pueden ayudar?";
 
-      document.querySelector(".btn-primary").addEventListener("click", () => {
-        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(MENSAJE_NAVBAR)}`;
-        window.open(url, "_blank");
+      // Botones generales (excepto Super Combo)
+      document.querySelectorAll(".btn-primary").forEach((btn) => {
+        if (btn.id !== "btn-super-combo") {
+          btn.addEventListener("click", () => {
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(MENSAJE_NAVBAR)}`;
+            window.open(url, "_blank");
+          });
+        }
       });
+
+      // =====================
+      // SUPER COMBO → MOSTRO ENTERO
+      // =====================
+      const btnSuperCombo = document.getElementById("btn-super-combo");
+
+      if (btnSuperCombo) {
+        btnSuperCombo.addEventListener("click", () => {
+          // Activar pestaña "combos"
+          tabBtns.forEach((b) => b.classList.remove("active"));
+          categoryGroups.forEach((g) => g.classList.remove("active"));
+
+          const btnCombos = document.querySelector('[data-category="combos"]');
+          const groupCombos = document.querySelector(
+            '.menu-category-group[data-category="combos"]',
+          );
+
+          btnCombos.classList.add("active");
+          groupCombos.classList.add("active");
+
+          // Scroll al producto
+          const target = document.getElementById("mostro-entero");
+
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+
+          // 🔥 efecto highlight
+          const card = target.closest(".menu-moderno-card");
+          card.classList.add("highlight-product");
+
+          setTimeout(() => {
+            card.classList.remove("highlight-product");
+          }, 2000);
+        });
+      }
     </script>
   </body>
 </html>
