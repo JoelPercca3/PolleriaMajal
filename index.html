@@ -37,7 +37,6 @@
       <nav id="nav-menu">
         <a href="#">Inicio</a>
         <a href="#menu">Menú</a>
-        <a href="#Contacto">Contacto</a>
       </nav>
       <button class="btn-primary">Pedir Ahora</button>
     </header>
@@ -656,6 +655,40 @@
     </script>
 
     <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const orden = [
+          "Mostro Entero",
+          "Familiar Majal",
+          "Sabor Majal",
+          "Duo Majal",
+          "Majal Mixto",
+          "Mollejitas Majal",
+          "Majal Choricero",
+        ];
+
+        const comboContainer = document.querySelector(
+          '.menu-category-group[data-category="combos"] .menu-moderno-grid',
+        );
+
+        if (!comboContainer) return;
+
+        // Convertir NodeList a array
+        const cards = Array.from(
+          comboContainer.querySelectorAll(".menu-moderno-card"),
+        );
+
+        // Función para obtener nombre del producto
+        const getNombre = (card) =>
+          card.querySelector("h3")?.textContent.trim();
+
+        // Ordenar según array "orden"
+        cards.sort((a, b) => {
+          return orden.indexOf(getNombre(a)) - orden.indexOf(getNombre(b));
+        });
+
+        // Reinsertar ordenado
+        cards.forEach((card) => comboContainer.appendChild(card));
+      });
       // =====================
       // MOLLEJITAS → SCROLL + HIGHLIGHT
       // =====================
