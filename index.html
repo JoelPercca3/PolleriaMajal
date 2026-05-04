@@ -56,10 +56,15 @@
       <h2 data-aos="fade-up">NUESTRAS ESPECIALIDADES</h2>
 
       <div class="cards">
-        <div class="card" data-aos="fade-up">
-          <img src="especialidad1.jpeg" alt="Pollo a la Brasa" loading="lazy" />
-          <h3>Pollo a la Brasa</h3>
-          <p>Pollo dorado, papas crocantes y ensalada fresca.</p>
+        <div
+          class="card"
+          id="card-mollejitas"
+          data-aos="fade-up"
+          style="cursor: pointer"
+        >
+          <img src="especialidad1.jpeg" alt="Mollejitas Majal" loading="lazy" />
+          <h3>Mollejitas Majal</h3>
+          <p>Sabrosas mollejitas a la parrilla con papas crocantes.</p>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="100">
@@ -200,7 +205,7 @@
               data-aos="flip-left"
               data-aos-delay="300"
             >
-              <h3>Mollejitas Majal</h3>
+              <h3 id="mollejitas-menu">Mollejitas Majal</h3>
               <p>¼ pollo + mollejitas + papas crujientes + ensalada fresca</p>
               <div class="card-footer">
                 <span class="price">S/ 17</span>
@@ -655,6 +660,42 @@
     </script>
 
     <script>
+      // =====================
+      // MOLLEJITAS → SCROLL + HIGHLIGHT
+      // =====================
+      const cardMollejitas = document.getElementById("card-mollejitas");
+
+      if (cardMollejitas) {
+        cardMollejitas.addEventListener("click", () => {
+          // Activar pestaña "combos"
+          tabBtns.forEach((b) => b.classList.remove("active"));
+          categoryGroups.forEach((g) => g.classList.remove("active"));
+
+          const btnCombos = document.querySelector('[data-category="combos"]');
+          const groupCombos = document.querySelector(
+            '.menu-category-group[data-category="combos"]',
+          );
+
+          btnCombos.classList.add("active");
+          groupCombos.classList.add("active");
+
+          // Scroll al producto
+          const target = document.getElementById("mollejitas-menu");
+
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+
+          // 🔥 efecto highlight
+          const card = target.closest(".menu-moderno-card");
+          card.classList.add("highlight-product");
+
+          setTimeout(() => {
+            card.classList.remove("highlight-product");
+          }, 2000);
+        });
+      }
       // =====================
       // MENÚ HAMBURGUESA
       // =====================
