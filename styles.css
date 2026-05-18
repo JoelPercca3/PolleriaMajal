@@ -127,11 +127,16 @@ nav a {
   background: #cc3000;
   transform: scale(1.05);
 }
+/* HAMBURGUESA */
+.hamburger span {
+  background: #222;
+}
 
 /* ===================== */
 /* HERO                 */
 /* ===================== */
 .hero {
+  border-top: solid 2px red;
   height: 90vh;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("pollo.jpeg");
